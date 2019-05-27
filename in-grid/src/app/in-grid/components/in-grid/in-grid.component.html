@@ -1,0 +1,17 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th *ngFor="let column of config.columns">
+                {{ column.label }}
+                <i class="material-icons">keyboard_arrow_up</i>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of config.data">
+            <td *ngFor="let column of config.columns">
+                {{ column.value(row) }}
+            </td>
+        </tr>
+    </tbody>
+</table>
